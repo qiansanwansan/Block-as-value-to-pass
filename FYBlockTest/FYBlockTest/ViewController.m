@@ -19,7 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [FYTest fyTestBlock:nil];
+    
     [FYTest fyTestBlock:^(FYModel * _Nonnull model) {
         NSString *name = model.name;
         NSLog(@"%@",name);
