@@ -18,5 +18,11 @@
         block(model);
     }
 }
-
++(void)fyTestReturnStrBlock:(returnStrBlock)block{
+    if (block) {
+        FYModel *model = [FYModel new];
+        model.name = @"tt";
+        NSLog(@"这里可以给FYTest的变量赋值：%@",block(model));
+    }
+}
 @end

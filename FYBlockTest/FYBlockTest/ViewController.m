@@ -27,6 +27,11 @@
         NSLog(@"%@",name);
     }];
     
+    [FYTest fyTestReturnStrBlock:^NSString *(FYModel * _Nonnull model) {
+        NSString *name = model.name;
+        NSLog(@"%@", name);
+        return [name stringByAppendingString:@"从ViewController里追加"] ;
+    }];
     
 }
 
